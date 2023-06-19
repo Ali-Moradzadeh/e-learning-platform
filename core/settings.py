@@ -44,12 +44,14 @@ INSTALLED_APPS = [
 
     #internal apps
     activate_app('students'),
+    'chat',
 
     #third apps
     'embed_video',
     'debug_toolbar',
     'redisboard',
     'rest_framework',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -83,6 +85,7 @@ TEMPLATES = [
     },
 ]
 
+ASGI_APPLICATION = 'core.asgi.application'
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
